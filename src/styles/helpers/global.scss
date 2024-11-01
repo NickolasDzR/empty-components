@@ -1,12 +1,78 @@
 body {
-  font: 300 16px/1 "Arial", sans-serif;
-  padding-left: 15px;
-  padding-top: 20px;
-  padding-bottom: 70px;
+    font: 300 16px/1 "Arial", sans-serif;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 70px;
 }
 
 h1 {
-  padding-top: 0;
-  font-size: 44px;
-  margin-bottom: 30px;
+    padding-top: 0;
+    font-size: 44px;
+    margin-bottom: 30px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+    padding-left: 0;
+}
+
+.container {
+    max-width: 1280px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+
+$paginationWidth: 20px;
+$paginationHeight: 20px;
+$paginationBackground: white;
+$paginationBackgroundOnHover: black;
+$borderWidth: 1px;
+$border-color: black;
+
+.pagination {
+    position: absolute;
+    right: 50%;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    display: flex;
+
+    li + li {
+        margin-left: 10px;
+    }
+}
+
+.pagination-button {
+    width: $paginationWidth;
+    height: $paginationHeight;
+    background-color: $paginationBackground;
+    border: 1px solid black;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all .3s ease;
+    padding: 0;
+
+    &:hover, &.is-active {
+        background-color: $paginationBackgroundOnHover;
+    }
 }

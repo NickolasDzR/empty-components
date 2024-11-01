@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@davidwells/postcss-math": "^1.0.3",
+    "@splidejs/splide": "^4.1.4",
     "autoprefixer": "^10.4.20",
     "ip": "^2.0.1",
     "path": "^0.12.7",

@@ -1,5 +1,23 @@
 include ../components/hamburger/hamburger
+include ../components/slider-banner/slider-banner
 
 block content
-    h1 Гамбургер
-    +hamburger
+    .container
+        .row
+            .col
+                h1 Гамбургер
+            .col
+                +hamburger
+
+    .container
+        .row
+            .col
+                h1 Слайдер
+                p Если слайдев нет, то блок не отображается
+                p Если слайд один то слайдер не инициализируется
+                p Если мышка на слайде то автоматическое прокручивание ставится на паузу
+                p Слайд может быть как ссылкой целиком (на всю картинку или на вс составную часть
+        .row
+            .col
+                +sliderBanner
+
