@@ -51,10 +51,10 @@ export default defineConfig(({command, mode}) => {
             }),
             removeConsole(servMode === "production" ? removeConsoleSettings : undefined)
         ],
-
         resolve: {
             alias: {
-
+                '@splideJs': path.resolve(__dirname, 'node_modules/@splidejs/splide/dist/js/splide.esm.js'),
+                '@splideCss': path.resolve(__dirname, 'node_modules/@splidejs/splide/dist/css/splide-core.min.css'),
             },
             extensions: ['.js', '.ts', '.pcss', '.css']
         },
