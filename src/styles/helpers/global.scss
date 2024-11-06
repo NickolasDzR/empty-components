@@ -1,14 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font: 300 16px/1 "Arial", sans-serif;
     padding-left: 15px;
     padding-top: 20px;
     padding-bottom: 70px;
+    position: relative;
 }
 
 h1 {
     padding-top: 0;
     font-size: 44px;
     margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
 }
 
 ul {
@@ -56,6 +69,7 @@ $border-color: black;
     transform: translateX(-50%);
     margin: 0 auto;
     display: flex;
+    justify-content: center;
 
     li + li {
         margin-left: 10px;
@@ -74,5 +88,45 @@ $border-color: black;
 
     &:hover, &.is-active {
         background-color: $paginationBackgroundOnHover;
+    }
+}
+
+.splide {
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        border: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        mix-blend-mode: lighten;
+        backdrop-filter: blur(3px);
+        background: rgba(255, 255, 255, .2);
+        cursor:pointer;
+
+        svg {
+            fill: $white;
+            width: 18px;
+        }
+
+        &--prev {
+            left: 40px;
+        }
+
+        &--next {
+            right: 40px;
+
+            svg {
+                transform: rotate(180deg);
+            }
+        }
     }
 }

@@ -24,6 +24,5 @@
     "node_modules/@types"
   ],
   "skipLibCheck": true,
-  "include": ["vite.config.js", "resources"],
   "allowUnreachableCode": false
 }

@@ -1,0 +1,31 @@
+@mixin dialog-reset {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    inset: 0;
+    text-align: center;
+    z-index: 100002;
+    opacity: 0;
+    pointer-events: none;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: opacity .3s ease;
+
+    @supports (height: 100dvh) {
+        & {
+            height: 100dvh;
+        }
+    }
+
+    @supports not (height: 100dvh) {
+        & {
+            height: 100%;
+            max-height: calc(var(--vh, 1vh) * 100vh);
+        }
+    }
+
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
