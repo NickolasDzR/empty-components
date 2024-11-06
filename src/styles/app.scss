@@ -1,5 +1,9 @@
 @import "helpers/variables";
+@import "helpers/mixins";
 @import "helpers/global";
+@import '../../node_modules/reset-css/reset.css';
 
 @import "../components/hamburger/hamburger";
+@import "../components/gallery/gallery";
 @import "../components/slider-banner/slider-banner";
+@import "../components/slider-gallery/slider-gallery";

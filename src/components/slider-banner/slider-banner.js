@@ -1,18 +1,14 @@
-const sliderBanner = document.querySelector(".slider-banner") as HTMLElement;
-
+"use strict";
+const sliderBanner = document.querySelector(".slider-banner");
 if (sliderBanner) {
-    const slides = sliderBanner.querySelectorAll(".splide__slide") as NodeListOf<HTMLLIElement>;
-
+    const slides = sliderBanner.querySelectorAll(".splide__slide");
     if (slides.length > 1) {
         (async () => {
-            await import('@splideJs').then(async res => {
+            await import('@splideJs').then(async (res) => {
                 // @ts-ignore
-                await import("@splideCss")
-
+                await import("@splideCss");
                 const splideInstance = res.Splide;
-
-                const splide = sliderBanner.querySelector(".splide") as HTMLDivElement;
-
+                const splide = sliderBanner.querySelector(".splide");
                 if (splide) {
                     const splideSlider = new splideInstance(splide, {
                         type: 'loop',
@@ -30,12 +26,11 @@ if (sliderBanner) {
                             page: "pagination-button"
                         }
                     });
-
                     splideSlider.mount();
                 }
-            })
-        })()
-    } else {
-
+            });
+        })();
+    }
+    else {
     }
 }

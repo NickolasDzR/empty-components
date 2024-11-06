@@ -28,7 +28,7 @@ export default defineConfig(({command, mode}) => {
 
     return {
         plugins: [
-            pugPlugin({pretty: true}, {name: "My Name"}),
+            pugPlugin({pretty: true}),
             tsconfigPaths(),
             ViteSvgSpriteWrapper({
                 icons: 'src/images/svg/*.svg',
@@ -49,7 +49,6 @@ export default defineConfig(({command, mode}) => {
                     }
                 }
             }),
-            removeConsole(servMode === "production" ? removeConsoleSettings : undefined)
         ],
         resolve: {
             alias: {
