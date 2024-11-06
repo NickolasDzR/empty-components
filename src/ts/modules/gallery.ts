@@ -14,6 +14,21 @@ export type SplideComponentConstructor = {
 }
 
 /**
+ * Разметка
+ *
+ *  <div class="parent" data-gallery-parent="data-gallery-parent">
+ *      <div class="child-wrapper" data-gallery-item="data-gallery-item" data-index=0>
+ *          <div class="child" data-image-source="https://placecats.com/millie/1280/640">
+ *
+ *          </div>
+ *      </div>
+ *  </div>
+ *
+ *  data-index - если будет слайдер и нужно открыть конкретный слайд по индексу
+ *  data-image-source - ссылка на картинку, которую нужно открыть в галереи
+ */
+
+/**
  * У родителя с картинками должен быть data-gallery-parent
  * У родителя самой картинки должен быть data-gallery-item
  * У картинки должна быть data-gallery-source
